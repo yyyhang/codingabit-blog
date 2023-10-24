@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Performance on Coding a Bit</title>
+    <link>https://www.codingabit.com/tags/performance/</link>
+    <description>Recent content in Performance on Coding a Bit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Jul 2023 05:00:00 +0000</lastBuildDate><atom:link href="https://www.codingabit.com/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Distributed Systems: An Introductory Guide</title>
+      <link>https://www.codingabit.com/blog/post-1/</link>
+      <pubDate>Sat, 01 Jul 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-1/</guid>
+      <description>Introduction In the realm of computing, the term &amp;ldquo;Distributed Systems&amp;rdquo; often surfaces as a critical area of study and application.</description>
+    </item>
+    
+  </channel>
+</rss>
