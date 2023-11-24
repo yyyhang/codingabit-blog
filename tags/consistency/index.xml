@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Consistency on Coding a Bit</title>
+    <link>https://www.codingabit.com/tags/consistency/</link>
+    <description>Recent content in Consistency on Coding a Bit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Aug 2023 05:00:00 +0000</lastBuildDate><atom:link href="https://www.codingabit.com/tags/consistency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Replication and Consistency in Distributed Systems</title>
+      <link>https://www.codingabit.com/blog/post-5/</link>
+      <pubDate>Sat, 05 Aug 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-5/</guid>
+      <description>Replication is a fundamental concept in distributed systems, playing a critical role in enhancing reliability, performance, and scalability.</description>
+    </item>
+    
+  </channel>
+</rss>

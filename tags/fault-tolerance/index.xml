@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fault Tolerance on Coding a Bit</title>
+    <link>https://www.codingabit.com/tags/fault-tolerance/</link>
+    <description>Recent content in Fault Tolerance on Coding a Bit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Sep 2023 05:00:00 +0000</lastBuildDate><atom:link href="https://www.codingabit.com/tags/fault-tolerance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring Fault Tolerance in Distributed Systems</title>
+      <link>https://www.codingabit.com/blog/post-9/</link>
+      <pubDate>Sat, 02 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-9/</guid>
+      <description>Fault tolerance is a fundamental aspect of distributed systems, crucial for ensuring system reliability and availability despite failures.</description>
+    </item>
+    
+  </channel>
+</rss>

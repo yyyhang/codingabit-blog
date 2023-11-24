@@ -6,22 +6,130 @@
     <description>Recent content in Tags on Coding a Bit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 05:00:00 +0000</lastBuildDate><atom:link href="https://www.codingabit.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Oct 2023 05:00:00 +0000</lastBuildDate><atom:link href="https://www.codingabit.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distributed Systems</title>
+      <link>https://www.codingabit.com/tags/distributed-systems/</link>
+      <pubDate>Wed, 25 Oct 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Middleware</title>
+      <link>https://www.codingabit.com/tags/middleware/</link>
+      <pubDate>Wed, 25 Oct 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/middleware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Technology</title>
+      <link>https://www.codingabit.com/tags/technology/</link>
+      <pubDate>Wed, 25 Oct 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>File Systems</title>
+      <link>https://www.codingabit.com/tags/file-systems/</link>
+      <pubDate>Thu, 12 Oct 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/file-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Naming</title>
+      <link>https://www.codingabit.com/tags/naming/</link>
+      <pubDate>Thu, 28 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/naming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://www.codingabit.com/tags/security/</link>
+      <pubDate>Fri, 15 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coordination</title>
+      <link>https://www.codingabit.com/tags/coordination/</link>
+      <pubDate>Sat, 02 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/coordination/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fault Tolerance</title>
+      <link>https://www.codingabit.com/tags/fault-tolerance/</link>
+      <pubDate>Sat, 02 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/fault-tolerance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Synchronization</title>
+      <link>https://www.codingabit.com/tags/synchronization/</link>
+      <pubDate>Sat, 02 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/synchronization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Consistency</title>
+      <link>https://www.codingabit.com/tags/consistency/</link>
+      <pubDate>Sat, 05 Aug 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/consistency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Replication</title>
+      <link>https://www.codingabit.com/tags/replication/</link>
+      <pubDate>Sat, 05 Aug 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/replication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Communication</title>
+      <link>https://www.codingabit.com/tags/communication/</link>
+      <pubDate>Fri, 21 Jul 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/communication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Architectures</title>
+      <link>https://www.codingabit.com/tags/architectures/</link>
+      <pubDate>Fri, 14 Jul 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/tags/architectures/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ssh</title>
       <link>https://www.codingabit.com/tags/ssh/</link>
       <pubDate>Fri, 07 Jul 2023 05:00:00 +0000</pubDate>
       
       <guid>https://www.codingabit.com/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://www.codingabit.com/tags/technology/</link>
-      <pubDate>Fri, 07 Jul 2023 05:00:00 +0000</pubDate>
-      
-      <guid>https://www.codingabit.com/tags/technology/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,1907 @@
+<!doctype html>
+<html
+  itemscope
+  lang="en-us"
+  itemtype="http://schema.org/WebPage">
+  <head>
+    
+    <meta charset="utf-8" />
+
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+
+<meta name="theme-name" content="hugoplate" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="/images/favicon_hu97457fe130631549aeaccffd9b8d93bf_1532459_96x0_resize_lanczos_3.png" type="image/x-icon">
+<link rel="icon" href="/images/favicon_hu97457fe130631549aeaccffd9b8d93bf_1532459_96x0_resize_lanczos_3.png" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="48x48" href="/images/favicon_hu97457fe130631549aeaccffd9b8d93bf_1532459_48x0_resize_lanczos_3.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon_hu97457fe130631549aeaccffd9b8d93bf_1532459_96x0_resize_lanczos_3.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon_hu97457fe130631549aeaccffd9b8d93bf_1532459_144x0_resize_lanczos_3.png">
+
+
+
+
+
+
+
+
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta
+  name="msapplication-TileColor"
+  content="#ddd" />
+<meta
+  name="theme-color"
+  content="#ffffff" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <base href="https://www.codingabit.com/blog/post-7/" />
+
+
+
+
+
+
+
+  
+
+
+
+<title>Mastering Synchronization and Coordination in Distributed Systems (1)</title>
+
+
+<meta name="generator" content="Hugo 0.119.0">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta
+    name="keywords"
+    content="Boilerplate, Hugo" />
+
+
+
+
+<meta
+  name="description"
+  content="this is meta description" />
+
+
+
+  <meta name="author" content="zeon.studio" />
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+
+  
+  
+    
+    
+      
+    
+
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+      
+        <meta property="og:image" content="https://www.codingabit.com/images/blog/Synchronization.png" />
+        <meta name="twitter:image" content="https://www.codingabit.com/images/blog/Synchronization.png" />
+        <meta
+          name="twitter:card"
+          content="summary" />
+      
+      
+      <meta property="og:image:width" content="1024" />
+      <meta property="og:image:height" content="1024" />
+    
+
+
+    
+    <meta
+      property="og:image:type"
+      content="image/
+        .png
+      " />
+  
+
+
+  
+
+
+
+
+
+<meta property="og:title" content="Mastering Synchronization and Coordination in Distributed Systems (1)" />
+<meta property="og:description" content="this is meta description" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.codingabit.com/blog/post-7/" />
+
+
+<meta name="twitter:title" content="Mastering Synchronization and Coordination in Distributed Systems (1)" />
+<meta name="twitter:description" content="this is meta description" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  let indexURL = "https://www.codingabit.com/searchindex.json";
+  let includeSectionsInSearch = ["blog"];
+  let no_results_for = "No results for";
+  let empty_search_results_placeholder = "Type something to search..";
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
+<link rel="preconnect" href="//cdnjs.cloudflare.com" />
+<link rel="preconnect" href="//www.googletagmanager.com" />
+<link rel="preconnect" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="https://use.fontawesome.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//connect.facebook.net" />
+<link rel="dns-prefetch" href="//platform.linkedin.com" />
+<link rel="dns-prefetch" href="//platform.twitter.com" />
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script>
+  (function () {
+    const googleFont = document.createElement("link");
+    googleFont.href = "https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Signika:wght@500;700&display=swap";
+    googleFont.type = "text/css";
+    googleFont.rel = "stylesheet";
+    document.head.appendChild(googleFont);
+  })();
+</script>
+
+
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+<link
+  href="/css/style.min.c0d7c4c4c60ca041c9798157c691d3d31f74c102e5b9aefffbba5d0399ff3e36.css"
+  integrity="sha256-wNfExMYMoEHJeYFXxpHT0x90wQLlua7/+7pdA5n/PjY="
+  rel="stylesheet" />
+
+
+<link
+  rel="stylesheet"
+  href="/css/style-lazy.min.4455a8ffb40725e06e12bf821b4590bc688dc99aa8bdac0413b163647e8ad40f.css"
+  integrity="sha256-RFWo/7QHJeBuEr+CG0WQvGiNyZqovawEE7FjZH6K1A8="
+  media="print"
+  onload="this.media='all'; this.onload=null;" />
+
+  </head>
+
+  <body>
+    
+    
+      
+
+
+
+      
+
+    
+
+
+    
+    <header
+  class="header sticky top-0 z-30">
+  <nav class="navbar container">
+    
+    <div class="order-0">
+      
+      <a class="navbar-brand block" href="/">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+  
+  
+    
+    
+  
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+  
+  
+
+  
+  
+    
+    
+      
+      
+
+
+      
+      
+        
+        
+        
+        
+
+        
+        
+        
+      
+      
+    
+  
+  
+
+  
+    <img
+      fetchpriority="high"
+      decoding="async"
+      class="img logo-light"
+      width="120"
+      height="32"
+      src="/images/logo_hufbc1ffed518505a82b191a085c9cd1af_714269_240x0_resize_q90_h2_lanczos_3.webp"
+      alt="Coding A Bit"
+      onerror="this.onerror=null;this.src='\/images\/logo_hufbc1ffed518505a82b191a085c9cd1af_714269_240x0_resize_lanczos_3.png';" />
+
+    <img
+      fetchpriority="high"
+      decoding="async"
+      class="img logo-dark"
+      width="120"
+      height="32"
+      src="/images/logo-darkmode_hu0e403f3f56afbc6af5e575cb72234646_716919_240x0_resize_q90_h2_lanczos_3.webp"
+      alt="Coding A Bit"
+      onerror="this.onerror=null;this.src='\/images\/logo-darkmode_hu0e403f3f56afbc6af5e575cb72234646_716919_240x0_resize_lanczos_3.png';" />
+  
+  
+
+
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Menu Open</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Menu Close</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8">
+      
+      
+        
+        
+        
+        
+          <li class="nav-item">
+            <a
+              class="nav-link "
+              
+              href="/"
+              >🏠 Home</a
+            >
+          </li>
+        
+      
+        
+        
+        
+        
+          <li class="nav-item">
+            <a
+              class="nav-link "
+              
+              href="/blog/"
+              >📝 Blog</a
+            >
+          </li>
+        
+      
+        
+        
+        
+        
+          <li class="nav-item">
+            <a
+              class="nav-link "
+              
+              href="/categories/"
+              >📚 Categories</a
+            >
+          </li>
+        
+      
+        
+        
+        
+        
+          <li class="nav-item">
+            <a
+              class="nav-link "
+              
+              href="/about/"
+              >🙋🏻‍♂️ About</a
+            >
+          </li>
+        
+      
+      
+        <li class="mt-4 inline-block lg:hidden">
+          <a
+            class="btn btn-outline-primary btn-sm"
+            href="https://www.tiktok.com/@hungry_bean?_t=8goERAlS59r&amp;_r=1">
+            Visit My TikTok
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+      
+        
+          <button
+            aria-label="search"
+            class="border-border text-dark hover:text-primary dark:border-darkmode-border mr-5 inline-block border-r pr-5 text-xl dark:text-white"
+            data-target="search-modal">
+            <i class="fa-solid fa-search"></i>
+          </button>
+        
+      
+
+      
+
+
+
+
+
+
+
+
+
+      
+
+
+  <div class="theme-switcher mr-5">
+    <input id="theme-switcher" data-theme-switcher type="checkbox" />
+    <label for="theme-switcher">
+      <span class="sr-only">theme switcher</span>
+      <span>
+        
+        <svg
+          class="absolute left-[4px] top-[4px] z-10 opacity-100 dark:opacity-0"
+          viewBox="0 0 56 56"
+          fill="#fff"
+          height="16"
+          width="16">
+          <path
+            d="M30 4.6c0-1-.9-2-2-2a2 2 0 0 0-2 2v5c0 1 .9 2 2 2s2-1 2-2Zm9.6 9a2 2 0 0 0 0 2.8c.8.8 2 .8 2.9 0L46 13a2 2 0 0 0 0-2.9 2 2 0 0 0-3 0Zm-26 2.8c.7.8 2 .8 2.8 0 .8-.7.8-2 0-2.9L13 10c-.7-.7-2-.8-2.9 0-.7.8-.7 2.1 0 3ZM28 16a12 12 0 0 0-12 12 12 12 0 0 0 12 12 12 12 0 0 0 12-12 12 12 0 0 0-12-12Zm23.3 14c1.1 0 2-.9 2-2s-.9-2-2-2h-4.9a2 2 0 0 0-2 2c0 1.1 1 2 2 2ZM4.7 26a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4.9c1 0 2-.9 2-2s-1-2-2-2Zm37.8 13.6a2 2 0 0 0-3 0 2 2 0 0 0 0 2.9l3.6 3.5a2 2 0 0 0 2.9 0c.8-.8.8-2.1 0-3ZM10 43.1a2 2 0 0 0 0 2.9c.8.7 2.1.8 3 0l3.4-3.5c.8-.8.8-2.1 0-2.9-.8-.8-2-.8-2.9 0Zm20 3.4c0-1.1-.9-2-2-2a2 2 0 0 0-2 2v4.9c0 1 .9 2 2 2s2-1 2-2Z" />
+        </svg>
+        
+        <svg
+          class="absolute left-[4px] top-[4px] z-10 opacity-0 dark:opacity-100"
+          viewBox="0 0 24 24"
+          fill="none"
+          height="16"
+          width="16">
+          <path
+            fill="#000"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8.2 2.2c1-.4 2 .6 1.6 1.5-1 3-.4 6.4 1.8 8.7a8.4 8.4 0 0 0 8.7 1.8c1-.3 2 .5 1.5 1.5v.1a10.3 10.3 0 0 1-9.4 6.2A10.3 10.3 0 0 1 3.2 6.7c1-2 2.9-3.5 4.9-4.4Z" />
+        </svg>
+      </span>
+    </label>
+  </div>
+
+  
+  
+  <script>
+    var darkMode = true;
+
+    
+
+    if (localStorage.getItem("theme") === "dark"){darkMode = true}
+    else if (localStorage.getItem("theme") === "light"){darkMode = false}
+    if (darkMode){document.documentElement.classList.toggle("dark")}
+    var themeSwitch = document.querySelectorAll("[data-theme-switcher]");
+
+    document.addEventListener("DOMContentLoaded", () => {
+      [].forEach.call(themeSwitch, function (ts) {
+        ts.checked = darkMode ? true : false;
+        ts.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark");
+          localStorage.setItem(
+            "theme",
+            document.documentElement.classList.contains("dark") ? "dark" : "light"
+          );
+        });
+      });
+    });
+  </script>
+  
+
+
+
+
+
+      
+      
+        <a
+          href="https://www.tiktok.com/@hungry_bean?_t=8goERAlS59r&amp;_r=1"
+          class="btn btn-outline-primary btn-sm hidden lg:inline-block">
+          Visit My TikTok
+        </a>
+      
+    </div>
+  </nav>
+</header>
+
+    
+
+
+
+
+  
+    <div
+      class="search-wrapper search-modal "
+      data-image="true"
+      data-description="true"
+      data-tags="true"
+      data-categories="true"
+      tabindex="-1"
+      aria-hidden="true"
+      style="--color-primary: #121212">
+      <div class="search-wrapper-content">
+        <div class="search-input-body">
+          <label for="search-modal-input" style="margin-top:-1px">
+            <span class="sr-only">search icon</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              height="18"
+              width="18"
+              class="search-icon"
+              data-type="search">
+              <path
+                fill="currentColor"
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              height="18"
+              width="18"
+              class="search-reset"
+              data-type="reset">
+              <path
+                fill="currentColor"
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+            </svg>
+          </label>
+          <input
+            id="search-modal-input"
+            type="text"
+            data-search-input
+            autocomplete="off"
+            aria-label="Search"
+            placeholder="Search Post ..." />
+        </div>
+        <div class="search-wrapper-body">
+          <div class="search-result" data-search-result></div>
+          <span class="search-result-empty">
+            Type something to search..
+          </span>
+        </div>
+        <div class="search-wrapper-footer">
+          <span>
+            <kbd>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                style="margin-top:-2px;"
+                viewBox="0 0 16 16">
+                <path
+                  d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+              </svg>
+            </kbd>
+            <kbd>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                style="margin-top:1px;"
+                viewBox="0 0 16 16">
+                <path
+                  d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+              </svg>
+            </kbd>
+            to navigate
+          </span>
+          <span>
+            <kbd>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                fill="currentColor"
+                style="display:inline-block;"
+                viewBox="0 0 16 16">
+                <path
+                  fill-rule="evenodd"
+                  d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z" />
+              </svg>
+            </kbd>
+            to select
+          </span>
+          <span class="search-result-info"></span>
+          <span data-target="close-search-modal">
+            <kbd>ESC</kbd> to close
+          </span>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+    <main>
+      
+  <section class="section pt-7">
+    <div class="container">
+      <div class="row justify-center">
+        <article class="lg:col-10">
+          
+          
+            <div class="mb-10">
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/images/blog/Synchronization_hu560d4b5a5004bb966aa8f1322c8b769c_1668884_545x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/images/blog/Synchronization_hu560d4b5a5004bb966aa8f1322c8b769c_1668884_600x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/images/blog/Synchronization_hu560d4b5a5004bb966aa8f1322c8b769c_1668884_700x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/images/blog/Synchronization_hu560d4b5a5004bb966aa8f1322c8b769c_1668884_1110x0_resize_q90_h2_lanczos_3.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/images/blog/Synchronization_hu560d4b5a5004bb966aa8f1322c8b769c_1668884_1110x0_resize_lanczos_3.png"
+            class=" w-full rounded img"
+            alt="Mastering Synchronization and Coordination in Distributed Systems (1)"
+            width="1024"
+            height="1024" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+            </div>
+          
+          <h1 class="h2 mb-4">
+            Mastering Synchronization and Coordination in Distributed Systems (1)
+          </h1>
+          <ul class="mb-4">
+            <li class="mr-4 inline-block">
+              <a
+                href="/authors/yuhang/">
+                <i class="fa-regular fa-circle-user mr-2"></i
+                >Yuhang
+              </a>
+            </li>
+            <li class="mr-4 inline-block">
+              <i class="fa-regular fa-folder mr-2"></i>
+              
+              
+                <a
+                  href="/categories/internet/"
+                  class="ms-1"
+                  >Internet
+                    , 
+                  
+                </a>
+              
+                <a
+                  href="/categories/cloud/"
+                  class="ms-1"
+                  >Cloud
+                </a>
+              
+            </li>
+            <li class="mr-4 inline-block">
+              <i class="fa-regular fa-clock mr-2"></i>
+              August 17, 2023
+            </li>
+          </ul>
+          <div class="content mb-10">
+            <h1 id="mastering-synchronization-and-coordination-in-distributed-systems">Mastering Synchronization and Coordination in Distributed Systems</h1>
+<h2 id="introduction-to-synchronization-and-coordination">Introduction to Synchronization and Coordination</h2>
+<p>In the realm of distributed systems, synchronization and coordination play a pivotal role in ensuring that independent, communicating processes work in harmony.</p>
+<h3 id="fundamental-role-of-synchronization">Fundamental Role of Synchronization</h3>
+<ul>
+<li><strong>Temporal Ordering:</strong> Synchronization is primarily about the temporal ordering of events across different processes. It ensures that events occur in a consistent and predictable manner.</li>
+<li><strong>Example Applications:</strong> This concept is vital in applications like distributed databases and collaborative work environments, where the timing of events critically impacts the system&rsquo;s functionality.</li>
+</ul>
+<h3 id="coordination-among-processes">Coordination Among Processes</h3>
+<ul>
+<li><strong>Managing Interactions:</strong> Coordination involves managing the interactions and dependencies between separate processes. It&rsquo;s about ensuring that these processes work together efficiently towards a common goal.</li>
+<li><strong>Global State Agreement:</strong> A significant aspect of coordination is achieving consensus on the global state of the system, which is challenging due to the absence of a central, controlling entity.</li>
+</ul>
+<h2 id="time-and-clocks-in-distributed-systems">Time and Clocks in Distributed Systems</h2>
+<p>The concept of time and the management of clocks are central to synchronization and coordination in distributed environments.</p>
+<h3 id="role-of-time">Role of Time</h3>
+<ul>
+<li><strong>Synchronization Basis:</strong> Time serves as the basis for synchronization in distributed systems. It helps in ordering events and coordinating actions across different nodes.</li>
+<li><strong>Challenges in Clock Management:</strong> Managing time is challenging in distributed systems due to clock drift and variance in clock speeds across different machines.</li>
+</ul>
+<h3 id="physical-vs-logical-clocks">Physical vs. Logical Clocks</h3>
+<ul>
+<li><strong>Physical Clocks:</strong> These are the actual hardware clocks in machines. Synchronizing physical clocks is crucial for operations that depend on real-time data.</li>
+<li><strong>Logical Clocks:</strong> Logical clocks, on the other hand, are used to order events within the system, irrespective of the actual physical time. They are essential for maintaining a consistent order of events.</li>
+</ul>
+<h2 id="physical-clocks-and-synchronization-algorithms">Physical Clocks and Synchronization Algorithms</h2>
+<p>Physical clock synchronization is essential for maintaining temporal order in distributed systems, especially in real-time applications.</p>
+<h3 id="synchronization-of-physical-clocks">Synchronization of Physical Clocks</h3>
+<ul>
+<li><strong>Challenges:</strong> The primary challenge in synchronizing physical clocks is dealing with network latencies and the inherent inaccuracy of clock hardware.</li>
+<li><strong>Importance:</strong> Accurate clock synchronization is crucial for tasks like coordinating database transactions, managing timeouts, and scheduling tasks.</li>
+</ul>
+<h3 id="key-synchronization-algorithms">Key Synchronization Algorithms</h3>
+<ul>
+<li><strong>Cristian’s Algorithm:</strong> A widely used technique for clock synchronization, involving round-trip communication with a time server to adjust local clocks.</li>
+<li><strong>Network Time Protocol (NTP):</strong> NTP is a more sophisticated approach used for synchronizing clocks over a network. It accounts for variable network latencies and strives for high accuracy.</li>
+<li><strong>The Berkeley Algorithm:</strong> This algorithm is employed for internal clock synchronization within a network. It averages the times of all nodes and adjusts each clock to this average, mitigating the effects of any single inaccurate clock.</li>
+</ul>
+<h2 id="logical-clocks-and-event-ordering">Logical Clocks and Event Ordering</h2>
+<p>Logical clocks are essential in distributed systems for ordering events without relying on physical time, which is crucial for consistency and coordination.</p>
+<h3 id="understanding-logical-clocks">Understanding Logical Clocks</h3>
+<ul>
+<li><strong>Lamport’s Logical Clocks:</strong> Introduced by Leslie Lamport, these clocks provide a simple yet effective way to order events in a distributed system. Each event in the system is assigned a timestamp that reflects a logical ordering.</li>
+<li><strong>Event Ordering:</strong> The key principle is that if one event causally affects another, it should have a lower timestamp, ensuring a logical sequence of events.</li>
+</ul>
+<h3 id="vector-clocks">Vector Clocks</h3>
+<ul>
+<li><strong>Extended Approach:</strong> Vector clocks extend Lamport&rsquo;s idea by maintaining a vector of timestamps, one for each process in the system. This method offers a more detailed causal relationship between events.</li>
+<li><strong>Concurrency and Causality:</strong> Vector clocks are particularly useful in identifying concurrent events and establishing a causal order among them, which is vital in systems where multiple processes operate independently.</li>
+</ul>
+<h2 id="consistent-cuts-and-snapshots-in-distributed-systems">Consistent Cuts and Snapshots in Distributed Systems</h2>
+<p>Consistent cuts and snapshots are techniques used to capture the global state of a distributed system at a particular point in time.</p>
+<h3 id="concept-of-consistent-cuts">Concept of Consistent Cuts</h3>
+<ul>
+<li><strong>Global State:</strong> A consistent cut represents a snapshot of the entire system&rsquo;s state that is consistent across all processes. It&rsquo;s a collection of local states and messages in transit, reflecting a moment in the system&rsquo;s operation.</li>
+<li><strong>Use in Algorithms:</strong> Consistent cuts are fundamental in algorithms for detecting global properties, like deadlocks or resource allocation states.</li>
+</ul>
+<h3 id="chandy--lamports-snapshot-algorithm">Chandy &amp; Lamport’s Snapshot Algorithm</h3>
+<ul>
+<li><strong>Functioning:</strong> This algorithm allows all processes in a distributed system to record their state without stopping the entire system. It&rsquo;s designed to capture a consistent global snapshot while the system continues to operate.</li>
+<li><strong>Applications:</strong> The algorithm is widely used in checkpointing and rollback recovery mechanisms in distributed systems.</li>
+</ul>
+<h2 id="distributed-concurrency-control">Distributed Concurrency Control</h2>
+<p>Concurrency control is critical in distributed systems to manage access to shared resources and ensure consistent and reliable operations.</p>
+<h3 id="challenges-in-concurrency-control">Challenges in Concurrency Control</h3>
+<ul>
+<li><strong>Managing Access:</strong> Distributed systems often have multiple processes accessing shared resources simultaneously. Managing this access without causing conflicts or deadlocks is a key challenge.</li>
+<li><strong>Consistency Maintenance:</strong> Ensuring that concurrent operations do not violate the consistency of the system or lead to incorrect states is essential.</li>
+</ul>
+<h3 id="methods-for-distributed-mutual-exclusion">Methods for Distributed Mutual Exclusion</h3>
+<ul>
+<li><strong>Lock-Based Approaches:</strong> These involve using locks to control access to shared resources. Only one process can hold the lock and access the resource at a time.</li>
+<li><strong>Token-Based Algorithms:</strong> In token-based approaches, a special token is passed among processes. A process can access shared resources only when it holds the token.</li>
+<li><strong>Comparison:</strong> Each method has its strengths and weaknesses. Lock-based approaches are straightforward but can lead to deadlocks. Token-based algorithms avoid deadlocks but can introduce delays in resource access.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Synchronization and coordination in distributed systems are complex yet crucial components that ensure system stability, consistency, and reliability. The methods and algorithms discussed in this blog provide a framework for understanding how these systems maintain order and coherence.</p>
+<h3 id="reflecting-on-the-importance">Reflecting on the Importance</h3>
+<ul>
+<li><strong>System Stability:</strong> Proper synchronization and coordination mechanisms are vital for maintaining the stability of a distributed system, especially in environments with numerous independent processes.</li>
+<li><strong>Consistency Guarantees:</strong> These mechanisms ensure that all processes in the system have a consistent view of the data and state, which is critical for the correctness of applications.</li>
+</ul>
+<h3 id="evolving-landscape-and-future-challenges">Evolving Landscape and Future Challenges</h3>
+<ul>
+<li><strong>Technological Advancements:</strong> As distributed systems continue to evolve with advancements in technology, the methods for synchronization and coordination will also need to adapt to new challenges and requirements.</li>
+<li><strong>Scalability and Efficiency:</strong> Future developments in this area are likely to focus on improving scalability and efficiency, particularly in large-scale and complex distributed environments.</li>
+</ul>
+<h3 id="looking-ahead">Looking Ahead</h3>
+<ul>
+<li><strong>Innovative Solutions:</strong> The field of distributed systems is ripe for innovative solutions that can handle the increasing complexity and scale of modern applications.</li>
+<li><strong>Emerging Technologies:</strong> Technologies like blockchain and edge computing are likely to influence future approaches to synchronization and coordination, offering new opportunities and challenges.</li>
+<li><strong>Research and Development:</strong> Ongoing research in this area is crucial for developing more robust and efficient methods to manage synchronization and coordination in distributed systems.</li>
+</ul>
+
+          </div>
+          <div class="row items-start justify-between">
+            <div class="lg:col-5 mb-10 flex items-center lg:mb-0">
+              <h5 class="mr-3">Tags :</h5>
+              <ul>
+                
+                
+                  <li class="inline-block">
+                    <a
+                      class="bg-theme-light hover:bg-primary dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark m-1 block rounded px-3 py-1 hover:text-white"
+                      href="/tags/technology/">
+                      Technology
+                    </a>
+                  </li>
+                
+                  <li class="inline-block">
+                    <a
+                      class="bg-theme-light hover:bg-primary dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark m-1 block rounded px-3 py-1 hover:text-white"
+                      href="/tags/distributed-systems/">
+                      Distributed systems
+                    </a>
+                  </li>
+                
+                  <li class="inline-block">
+                    <a
+                      class="bg-theme-light hover:bg-primary dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark m-1 block rounded px-3 py-1 hover:text-white"
+                      href="/tags/synchronization/">
+                      Synchronization
+                    </a>
+                  </li>
+                
+                  <li class="inline-block">
+                    <a
+                      class="bg-theme-light hover:bg-primary dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark m-1 block rounded px-3 py-1 hover:text-white"
+                      href="/tags/coordination/">
+                      Coordination
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+            <div class="lg:col-4 flex items-center">
+              
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="share-icons">
+  <h5 class="share-title">Share :</h5>
+
+
+  
+  
+    <a
+      class="share-link share-facebook"
+      href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.codingabit.com%2fblog%2fpost-7%2f"
+      target="_blank"
+      rel="noopener"
+      aria-label="share facebook">
+      <span class="share-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+        </svg>
+      </span>
+    </a>
+  
+
+
+  
+  
+    <a
+      class="share-link share-twitter"
+      href="https://twitter.com/intent/tweet/?text=Share&amp;url=https%3a%2f%2fwww.codingabit.com%2fblog%2fpost-7%2f"
+      target="_blank"
+      rel="noopener"
+      aria-label="share twitter">
+      <span aria-hidden="true" class="share-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+        </svg>
+      </span>
+    </a>
+  
+
+
+  
+  
+    <a
+      class="share-link share-email"
+      href="mailto:?subject=Share&amp;body=https%3a%2f%2fwww.codingabit.com%2fblog%2fpost-7%2f"
+      target="_self"
+      rel="noopener"
+      aria-label="share email">
+      <span aria-hidden="true" class="share-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z" />
+        </svg>
+      </span>
+    </a>
+  
+
+
+  
+  
+    <a
+      class="share-link share-reddit"
+      href="https://reddit.com/submit/?url=https%3a%2f%2fwww.codingabit.com%2fblog%2fpost-7%2f&amp;resubmit=true&amp;title=Share"
+      target="_blank"
+      rel="noopener"
+      aria-label="share reddit">
+      <span aria-hidden="true" class="share-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65 0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66 0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64 0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4 0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6 0 .23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1 0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z" />
+        </svg>
+      </span>
+    </a>
+  
+
+
+  
+  
+
+
+  
+  
+</div>
+
+            </div>
+          </div>
+          
+          
+            <div class="mt-20">
+              <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "themefisher-template" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+          
+        </article>
+      </div>
+
+      
+      
+      
+      
+        <div class="section pb-0">
+          <h2 class="h3 mb-12">Related Posts</h2>
+          <div class="row">
+            
+              <div class="lg:col-4">
+                <div class="bg-body dark:bg-darkmode-body">
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/images/blog/System%20Architectures_hud683974676f919336a80f3a6191750fe_3453264_545x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/images/blog/System%20Architectures_hud683974676f919336a80f3a6191750fe_3453264_600x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/images/blog/System%20Architectures_hud683974676f919336a80f3a6191750fe_3453264_700x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/images/blog/System%20Architectures_hud683974676f919336a80f3a6191750fe_3453264_1110x0_resize_q90_h2_lanczos_3.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/images/blog/System%20Architectures_hud683974676f919336a80f3a6191750fe_3453264_1110x0_resize_lanczos_3.png"
+            class=" mb-6 w-full rounded img"
+            alt="Exploring System Architectures in Distributed Systems"
+            width="1792"
+            height="1024" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+  
+  <h4 class="mb-3">
+    <a href="/blog/post-3/">
+      Exploring System Architectures in Distributed Systems
+    </a>
+  </h4>
+  <ul class="mb-4">
+    <li class="mr-4 inline-block">
+      <a href="/authors/yuhang/">
+        <i class="fa-regular fa-circle-user mr-2"></i>Yuhang
+      </a>
+    </li>
+    <li class="mr-4 inline-block">
+      <i class="fa-regular fa-folder mr-2"></i>
+      
+      
+        <a
+          href="/categories/internet/"
+          class="ms-1"
+          >Internet
+            , 
+          
+        </a>
+      
+        <a
+          href="/categories/cloud/"
+          class="ms-1"
+          >Cloud
+        </a>
+      
+    </li>
+  </ul>
+  <p class="mb-6">In the ever-evolving world of computer science, understanding the complexities and design of distributed systems is pivotal for technology professionals.</p>
+  <a class="btn btn-outline-primary btn-sm" href="/blog/post-3/">
+    Read More
+  </a>
+</div>
+
+              </div>
+            
+              <div class="lg:col-4">
+                <div class="bg-body dark:bg-darkmode-body">
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/images/blog/DFS_hu0a0333ba29a74bcb8ccec04089cb0ee7_1990471_545x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/images/blog/DFS_hu0a0333ba29a74bcb8ccec04089cb0ee7_1990471_600x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/images/blog/DFS_hu0a0333ba29a74bcb8ccec04089cb0ee7_1990471_700x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/images/blog/DFS_hu0a0333ba29a74bcb8ccec04089cb0ee7_1990471_1110x0_resize_q90_h2_lanczos_3.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/images/blog/DFS_hu0a0333ba29a74bcb8ccec04089cb0ee7_1990471_1110x0_resize_lanczos_3.png"
+            class=" mb-6 w-full rounded img"
+            alt="Understanding Distributed File Systems: A Comprehensive Guide"
+            width="1024"
+            height="1024" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+  
+  <h4 class="mb-3">
+    <a href="/blog/post-12/">
+      Understanding Distributed File Systems: A Comprehensive Guide
+    </a>
+  </h4>
+  <ul class="mb-4">
+    <li class="mr-4 inline-block">
+      <a href="/authors/yuhang/">
+        <i class="fa-regular fa-circle-user mr-2"></i>Yuhang
+      </a>
+    </li>
+    <li class="mr-4 inline-block">
+      <i class="fa-regular fa-folder mr-2"></i>
+      
+      
+        <a
+          href="/categories/internet/"
+          class="ms-1"
+          >Internet
+            , 
+          
+        </a>
+      
+        <a
+          href="/categories/cloud/"
+          class="ms-1"
+          >Cloud
+        </a>
+      
+    </li>
+  </ul>
+  <p class="mb-6">Distributed File Systems (DFS) are key components in modern distributed computing, facilitating efficient file sharing and management across networks.</p>
+  <a class="btn btn-outline-primary btn-sm" href="/blog/post-12/">
+    Read More
+  </a>
+</div>
+
+              </div>
+            
+              <div class="lg:col-4">
+                <div class="bg-body dark:bg-darkmode-body">
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/images/blog/Replication_hu2748febee80acb9fa56beb778a764192_2250268_545x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/images/blog/Replication_hu2748febee80acb9fa56beb778a764192_2250268_600x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/images/blog/Replication_hu2748febee80acb9fa56beb778a764192_2250268_700x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/images/blog/Replication_hu2748febee80acb9fa56beb778a764192_2250268_1110x0_resize_q90_h2_lanczos_3.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/images/blog/Replication_hu2748febee80acb9fa56beb778a764192_2250268_1110x0_resize_lanczos_3.png"
+            class=" mb-6 w-full rounded img"
+            alt="Understanding Replication and Consistency in Distributed Systems"
+            width="1024"
+            height="1024" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+  
+  <h4 class="mb-3">
+    <a href="/blog/post-5/">
+      Understanding Replication and Consistency in Distributed Systems
+    </a>
+  </h4>
+  <ul class="mb-4">
+    <li class="mr-4 inline-block">
+      <a href="/authors/yuhang/">
+        <i class="fa-regular fa-circle-user mr-2"></i>Yuhang
+      </a>
+    </li>
+    <li class="mr-4 inline-block">
+      <i class="fa-regular fa-folder mr-2"></i>
+      
+      
+        <a
+          href="/categories/internet/"
+          class="ms-1"
+          >Internet
+            , 
+          
+        </a>
+      
+        <a
+          href="/categories/cloud/"
+          class="ms-1"
+          >Cloud
+        </a>
+      
+    </li>
+  </ul>
+  <p class="mb-6">Replication is a fundamental concept in distributed systems, playing a critical role in enhancing reliability, performance, and scalability.</p>
+  <a class="btn btn-outline-primary btn-sm" href="/blog/post-5/">
+    Read More
+  </a>
+</div>
+
+              </div>
+            
+          </div>
+        </div>
+      
+    </div>
+  </section>
+
+    </main>
+
+    
+    
+      <footer class="bg-theme-light dark:bg-darkmode-theme-light">
+  <div class="container">
+    <div class="row items-center py-7">
+      <div class="lg:col-3 mb-8 text-center lg:mb-0 lg:text-left">
+        
+        
+      </div>
+      <div class="lg:col-6 mb-8 text-center lg:mb-0">
+        <ul>
+          
+            <li class="m-3 inline-block">
+              <a
+                
+                href="
+                  /privacy-policy/
+                "
+                >Privacy Policy</a
+              >
+            </li>
+          
+        </ul>
+      </div>
+      <div class="lg:col-3 mb-8 text-center lg:mb-0 lg:mt-0 lg:text-right">
+        <ul class="social-icons">
+          
+            <li>
+              <a
+                target="_blank"
+                aria-label="github"
+                rel="nofollow noopener"
+                href="https://github.com/yyyhang">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          
+            <li>
+              <a
+                target="_blank"
+                aria-label="linkedin"
+                rel="nofollow noopener"
+                href="https://www.linkedin.com/in/yuhang-yang-cs/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          
+            <li>
+              <a
+                target="_blank"
+                aria-label="tiktok"
+                rel="nofollow noopener"
+                href="https://www.tiktok.com/@hungry_bean?_t=8goERAlS59r&amp;_r=1">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </li>
+          
+            <li>
+              <a
+                target="_blank"
+                aria-label="instagram"
+                rel="nofollow noopener"
+                href="https://instagram.com/hangyoop?igshid=OGQ5ZDc2ODk2ZA==">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-border dark:border-darkmode-border border-t py-7">
+    <div class="text-light dark:text-darkmode-light container text-center">
+      <p>
+        Copyright Coding A Bit
+      </p>
+    </div>
+  </div>
+</footer>
+
+      
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+<script
+  crossorigin="anonymous"
+  integrity="sha256-HNtb4dMoWbNSeb1hh0/oFX85kBGiQY0bSBeOphsFH2s="
+  src="/js/script.min.1cdb5be1d32859b35279bd61874fe8157f399011a2418d1b48178ea61b051f6b.js"></script>
+
+
+<script
+  crossorigin="anonymous"
+  integrity="sha256-B6xkgfh/Kvqv5KhwfzCl2bDxX83d75UmDJHTJqlOs3M="
+  src="/js/script-lazy.min.07ac6481f87f2afaafe4a8707f30a5d9b0f15fcdddef95260c91d326a94eb373.js"
+  defer></script>
+
+
+
+<script>
+  if ('serviceWorker' in navigator){navigator.serviceWorker.register("/service-worker.js");}
+</script>
+
+
+
+
+
+
+  
+    <div id="cookie-box" class="cookie-box cookie-box-hide">
+      This site uses cookies. By continuing to use this website, you agree to their use.
+      <button
+        id="cookie-button"
+        class="cookie-box-button btn btn-sm btn-outline-primary">
+        I Accept
+      </button>
+    </div>
+
+    
+    <script type="application/javascript">
+      const cookieBox = document.getElementById('cookie-box');
+      const cookieButton = document.getElementById('cookie-button');
+      if (!Cookies.get('cookie-consent')) {
+        cookieBox.classList.remove('cookie-box-hide');
+        cookieButton.onclick = function () {
+          Cookies.set('cookie-consent', true, {
+            expires:  60 
+          });
+          cookieBox.classList.add('cookie-box-hide');
+        };
+      }
+    </script>
+
+    
+    <style>
+      .cookie-box {
+        position: fixed;
+        left: 2rem;
+        bottom: 2rem;
+        z-index: 9999;
+        padding: 1.5rem;
+        background-color: #fff;
+        max-width: calc(100% - 4rem);
+        width: 25rem;
+        box-shadow: 1px 0px 10px 7px rgba(154, 154, 154, 0.11);
+        border-radius: inherit;
+      }
+      .cookie-box-hide {
+        display: none;
+      }
+      .cookie-box-button {
+        display: block;
+        margin-top: 1rem;
+      }
+
+      .dark .cookie-box {
+        background-color: #222;
+      }
+    </style>
+  
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>

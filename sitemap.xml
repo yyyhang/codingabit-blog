@@ -3,30 +3,96 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.codingabit.com/</loc>
-    <lastmod>2023-07-07T05:00:00+00:00</lastmod>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.codingabit.com/blog/</loc>
-    <lastmod>2023-07-07T05:00:00+00:00</lastmod>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.codingabit.com/categories/</loc>
-    <lastmod>2023-07-07T05:00:00+00:00</lastmod>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.codingabit.com/categories/cloud/</loc>
-    <lastmod>2023-07-07T05:00:00+00:00</lastmod>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-13/</loc>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/distributed-systems/</loc>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/categories/internet/</loc>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/middleware/</loc>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/</loc>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/technology/</loc>
+    <lastmod>2023-10-25T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/file-systems/</loc>
+    <lastmod>2023-10-12T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-12/</loc>
+    <lastmod>2023-10-12T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/naming/</loc>
+    <lastmod>2023-09-28T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-11/</loc>
+    <lastmod>2023-09-28T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-10/</loc>
+    <lastmod>2023-09-15T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/security/</loc>
+    <lastmod>2023-09-15T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/coordination/</loc>
+    <lastmod>2023-09-02T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-8/</loc>
+    <lastmod>2023-09-02T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-9/</loc>
+    <lastmod>2023-09-02T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/fault-tolerance/</loc>
+    <lastmod>2023-09-02T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/synchronization/</loc>
+    <lastmod>2023-09-02T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-7/</loc>
+    <lastmod>2023-08-17T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/consistency/</loc>
+    <lastmod>2023-08-05T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/replication/</loc>
+    <lastmod>2023-08-05T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-5/</loc>
+    <lastmod>2023-08-05T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/communication/</loc>
+    <lastmod>2023-07-21T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-4/</loc>
+    <lastmod>2023-07-21T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/tags/architectures/</loc>
+    <lastmod>2023-07-14T05:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.codingabit.com/blog/post-3/</loc>
+    <lastmod>2023-07-14T05:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.codingabit.com/blog/post-2/</loc>
     <lastmod>2023-07-07T05:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.codingabit.com/categories/internet/</loc>
-    <lastmod>2023-07-07T05:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.codingabit.com/tags/ssh/</loc>
-    <lastmod>2023-07-07T05:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.codingabit.com/tags/</loc>
-    <lastmod>2023-07-07T05:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.codingabit.com/tags/technology/</loc>
     <lastmod>2023-07-07T05:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.codingabit.com/tags/dependability/</loc>

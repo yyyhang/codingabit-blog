@@ -6,7 +6,97 @@
     <description>Recent content on Coding a Bit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 05:00:00 +0000</lastBuildDate><atom:link href="https://www.codingabit.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Oct 2023 05:00:00 +0000</lastBuildDate><atom:link href="https://www.codingabit.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Demystifying Middleware in Distributed Systems</title>
+      <link>https://www.codingabit.com/blog/post-13/</link>
+      <pubDate>Wed, 25 Oct 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-13/</guid>
+      <description>Middleware in distributed systems acts as a crucial intermediary layer, bridging the gap between network operating systems and applications.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Distributed File Systems: A Comprehensive Guide</title>
+      <link>https://www.codingabit.com/blog/post-12/</link>
+      <pubDate>Thu, 12 Oct 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-12/</guid>
+      <description>Distributed File Systems (DFS) are key components in modern distributed computing, facilitating efficient file sharing and management across networks.</description>
+    </item>
+    
+    <item>
+      <title>Navigating the World of Naming in Distributed Systems</title>
+      <link>https://www.codingabit.com/blog/post-11/</link>
+      <pubDate>Thu, 28 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-11/</guid>
+      <description>Naming in distributed systems is a crucial aspect of system design, impacting the ease of resource management and accessibility.</description>
+    </item>
+    
+    <item>
+      <title>Securing the Digital Frontier: Security in Distributed Systems</title>
+      <link>https://www.codingabit.com/blog/post-10/</link>
+      <pubDate>Fri, 15 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-10/</guid>
+      <description>Security is a pivotal aspect of dependability in distributed systems, encompassing confidentiality, integrity, and the assurance of secure communication.</description>
+    </item>
+    
+    <item>
+      <title>Delving Deeper into Synchronization and Coordination in Distributed Systems (2)</title>
+      <link>https://www.codingabit.com/blog/post-8/</link>
+      <pubDate>Sat, 02 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-8/</guid>
+      <description>In the complex world of distributed systems, advanced synchronization techniques play a critical role in ensuring system stability and efficiency.</description>
+    </item>
+    
+    <item>
+      <title>Exploring Fault Tolerance in Distributed Systems</title>
+      <link>https://www.codingabit.com/blog/post-9/</link>
+      <pubDate>Sat, 02 Sep 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-9/</guid>
+      <description>Fault tolerance is a fundamental aspect of distributed systems, crucial for ensuring system reliability and availability despite failures.</description>
+    </item>
+    
+    <item>
+      <title>Mastering Synchronization and Coordination in Distributed Systems (1)</title>
+      <link>https://www.codingabit.com/blog/post-7/</link>
+      <pubDate>Thu, 17 Aug 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-7/</guid>
+      <description>Mastering Synchronization and Coordination in Distributed Systems Introduction to Synchronization and Coordination In the realm of distributed systems, synchronization and coordination play a pivotal role in ensuring that independent, communicating processes work in harmony.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Replication and Consistency in Distributed Systems</title>
+      <link>https://www.codingabit.com/blog/post-5/</link>
+      <pubDate>Sat, 05 Aug 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-5/</guid>
+      <description>Replication is a fundamental concept in distributed systems, playing a critical role in enhancing reliability, performance, and scalability.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Communication in Distributed Systems</title>
+      <link>https://www.codingabit.com/blog/post-4/</link>
+      <pubDate>Fri, 21 Jul 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-4/</guid>
+      <description>Effective communication is the cornerstone of distributed systems, enabling cooperative processes to function harmoniously.</description>
+    </item>
+    
+    <item>
+      <title>Exploring System Architectures in Distributed Systems</title>
+      <link>https://www.codingabit.com/blog/post-3/</link>
+      <pubDate>Fri, 14 Jul 2023 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.codingabit.com/blog/post-3/</guid>
+      <description>In the ever-evolving world of computer science, understanding the complexities and design of distributed systems is pivotal for technology professionals.</description>
+    </item>
+    
     <item>
       <title>Connect to your server via SSH: A Guide to SSH and Public Key Authentication</title>
       <link>https://www.codingabit.com/blog/post-2/</link>
